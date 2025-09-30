@@ -1,9 +1,9 @@
-/* Payment Widget Modal Styles */
+/* Payment Widget Modal Styles - Inspired by Baltic Comfort Screenshot */
 .payment-widget-modal {
   position: fixed;
   top: 0; left: 0;
   width: 100vw; height: 100vh;
-  background: rgba(20,20,40,0.4);
+  background: rgba(67, 160, 71, 0.14); /* Soft green overlay */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,14 +11,14 @@
 }
 
 .payment-widget-content {
-  background: #fff;
-  padding: 2em 2.5em;
-  border-radius: 14px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  background: #eaf7e9; /* Light green */
+  padding: 2.5em 2.8em;
+  border-radius: 22px;
+  box-shadow: 0 10px 40px rgba(67, 160, 71, 0.22), 0 2px 8px rgba(0,0,0,0.05);
   position: relative;
-  width: 350px;
-  max-width: 90vw;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  width: 370px;
+  max-width: 95vw;
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
   animation: fadeInUp 0.3s;
 }
 
@@ -29,37 +29,100 @@
 
 .payment-widget-close {
   position: absolute;
-  top: 12px;
-  right: 16px;
+  top: 14px;
+  right: 18px;
   background: none;
   border: none;
-  font-size: 1.5em;
-  color: #444;
+  font-size: 1.7em;
+  color: #388e3c;
   cursor: pointer;
+  transition: color 0.18s;
+}
+
+.payment-widget-close:hover {
+  color: #1b5e20;
 }
 
 .payment-widget-details {
-  margin-bottom: 1.5em;
-  color: #333;
-  font-size: 1em;
+  margin-bottom: 1.7em;
+  color: #245029;
+  font-size: 1.15em;
+  text-align: center;
+  font-weight: 500;
 }
 
 .payment-widget-btn {
-  background: #2e7d32;
+  background: #245029;
   color: #fff;
   border: none;
-  padding: 0.7em 2em;
-  border-radius: 6px;
-  font-size: 1.1em;
+  padding: 1em 2.5em;
+  border-radius: 30px;
+  font-size: 1.15em;
+  font-weight: bold;
   cursor: pointer;
-  transition: background 0.18s;
+  box-shadow: 0 4px 16px rgba(67,160,71,0.09);
+  transition: background 0.18s, box-shadow 0.18s;
+  margin: 0 auto;
+  display: block;
 }
 
 .payment-widget-btn:hover {
-  background: #43a047;
+  background: #388e3c;
+  box-shadow: 0 6px 20px rgba(67,160,71,0.15);
 }
 
 #payment-result {
-  margin-top: 1.4em;
+  margin-top: 1.5em;
   text-align: center;
+  color: #245029;
+  font-size: 1.08em;
+  font-weight: 500;
+}
+
+/* Headings inspired by screenshot */
+.payment-widget-title {
+  font-size: 2em;
+  color: #245029;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.6em;
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+}
+
+.payment-widget-subtitle {
+  font-size: 1.18em;
+  color: #388e3c;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 1.2em;
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+}
+
+/* Optional: Add card shadow for any card elements */
+.payment-widget-card {
+  background: #d3eed2;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(67,160,71,0.08);
+  padding: 1.5em;
+  margin: 1em 0;
+  color: #245029;
+  font-weight: 500;
+}
+
+/* Make inputs rounded and green-bordered if used */
+.payment-widget-input {
+  border: 2px solid #a5d6a7;
+  border-radius: 16px;
+  padding: 0.9em 1.2em;
+  font-size: 1.1em;
+  font-family: inherit;
+  margin-bottom: 1em;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.18s;
+}
+
+.payment-widget-input:focus {
+  border-color: #388e3c;
+  outline: none;
 }
